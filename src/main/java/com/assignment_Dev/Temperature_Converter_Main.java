@@ -41,6 +41,11 @@ public class Temperature_Converter_Main {
         if (!unitOfMeasurementsList.contains(inputUnitOfMeasure) || !unitOfMeasurementsList.contains(outputUnitOfMeasure)) {
             return "invalid";
         } else {
+            //in case student response is empty
+            if(studentResponse.equals("")){
+                return "incorrect";
+            }
+
             ArrayList<String> responseString_BrokenUp_List = new ArrayList<>(Arrays.asList(studentResponse.split("")));
 
             for (int i = 0; i < responseString_BrokenUp_List.size(); i++) {

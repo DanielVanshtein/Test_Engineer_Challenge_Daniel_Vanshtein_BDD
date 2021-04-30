@@ -14,3 +14,5 @@ Feature: Test inputs for Temperature Converter
       | 317.33                | Kelvin                    | Fahrenheit                 | 111.554  | incorrect |
       | 6.5                   | Fahrenheit                | Rankine                    | dog      | incorrect |
       | 136.1                 | dogcow                    | Celsius                    | 45.32    | invalid   |
+      | 200.65                | Kelvin                    | catdog                     | 34.67    | invalid   |
+      | 200.65                | Kelvin                    | Celsius                    |          | incorrect |
