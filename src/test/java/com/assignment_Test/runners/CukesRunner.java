@@ -14,7 +14,6 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = "@wip"
 )
-//checking continuous integration with Webhooks
-//
+
 public class CukesRunner {
 }
