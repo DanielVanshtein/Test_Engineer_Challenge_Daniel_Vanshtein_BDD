@@ -9,40 +9,47 @@ This repository contains a maven framework that has:
 * This is where a BDD framework is setup to test and assert the code found in the Main package.
 ```
   >Features Package<
-  - contains my feature file with my Scenario Outline.
+  - contains the feature file with a Scenario Outline for this task. Written in Gherkin language.
     - here more positive and negative test cases and/or edge cases can be added in the Examples Table.
 
   >Step_Definitions Package<
-  - contains my implementations for my Scenario Outline once I do a dryrun of it.
+  - contains implementations for the Scenario Outline. After running a failed test using dryrun in our CukesRunner getting an MVP we being to give implementation to each step. 
 
   >Runners Package<
-     -> CukesRunner - main runner for my BDD framework. Will run all scenarios or the ones that have certain tags. 
+     -> CukesRunner - main runner for this BDD framework. Will run all scenarios or the ones that have certain tags. In this case we have tagged our scenario outline with the @regression tag 
         
-     -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file
+     -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file. The features path is directed to the rerun.txt file.
 ```
 ## Reports
-* Using maven-sure-plugin we can get html reports generated from a 'cucumber.json' file that we add in our @CucumberOptions in our CukesRunner
+* Using maven-cucumber-reporting we can get html reports generated from a 'cucumber.json' file. A plugin placed in @CucumberOptions in our CukesRunner allows us to generate the 'cucumber.json' file
 ```xml
           <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <!--1 feature file per thread. Control the amount of max threads here-->
-                    <parallel>methods</parallel>
-                    <threadCount> 6 </threadCount>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-
-                    <!-- If one of my tests fails then continue with that execution -->
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <includes>
-                        <include>**/CukesRunner*.java</include>
-                    </includes>
-                </configuration>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.4.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Cucumber HTML Reports</projectName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/cucumber*.json</param>
+                            </jsonFiles>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 ```
 
 ## CI/CD Integration
 Amazon EC2:
-* Linux AMI with Docker and Jenkins
-  *    
+* Linux AMI with Docker and Jenkins.yml loaded onto it using a pre-made bash script.
+  *  We install the Jenkins.yml onto our instance and then configure our instance throug out IP address and specific port: [Link to Jenkins](http://100.26.236.242:8080/)
+    * Username: admin
+    * Password: admin   
