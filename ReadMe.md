@@ -2,7 +2,7 @@
 
 **About:** 
 * A temperature converter functionality that works through a browser is being tested in this repository. 
-* This repository contains a maven framework that has [Main Package](#mainpackage-developer):
+* This repository contains a maven framework that has [Main Package](mainpackage-developer):
   
 ## Main Package - Developer
 * This is where the actual code/build for the temperature converter is.
