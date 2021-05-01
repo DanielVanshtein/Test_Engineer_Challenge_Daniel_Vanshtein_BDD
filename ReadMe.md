@@ -13,12 +13,15 @@ This repository contains a maven framework that has:
     - here more positive and negative test cases and/or edge cases can be added in the Examples Table.
 
   >Step_Definitions Package<
-  - contains implementations for the Scenario Outline. After running a failed test using dryrun in our CukesRunner getting an MVP we being to give implementation to each step. 
+  - contains implementations for the Scenario Outline. After running a failed test using dryrun in our CukesRunner 
+  getting an MVP we being to give implementation to each step. 
 
   >Runners Package<
-     -> CukesRunner - main runner for this BDD framework. Will run all scenarios or the ones that have certain tags. In this case we have tagged our scenario outline with the @regression tag 
+     -> CukesRunner - main runner for this BDD framework. Will run all scenarios or the ones that have certain tags. 
+     In this case we have tagged our scenario outline with the @regression tag 
         
-     -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file. The features path is directed to the rerun.txt file.
+     -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file. The features path is directed 
+     to the rerun.txt file.
 ```
 ## Reports
 * Using maven-cucumber-reporting we can get html reports generated from a 'cucumber.json' file. A plugin placed in @CucumberOptions in our CukesRunner allows us to generate the 'cucumber.json' file
@@ -52,4 +55,6 @@ Amazon EC2:
 * Linux AMI with Docker and Jenkins installed on it.
   *  Access to Jenkins: [Link to Jenkins](http://100.26.236.242:8080/)
       * Username: admin
-      * Password: admin   
+      * Password: admin
+
+* WebHooks is setup on Github and Jenkins to do CI everytime we commit any changed to our repository.  
