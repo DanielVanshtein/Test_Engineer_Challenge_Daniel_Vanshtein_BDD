@@ -1,6 +1,6 @@
 # Test Engineer Challenge - Temperature Converter
 
-### ABOUT: 
+** ABOUT:** 
 * A temperature converter functionality that works through a browser is being tested in this repository. 
 * This repository contains a maven framework that has:
   
