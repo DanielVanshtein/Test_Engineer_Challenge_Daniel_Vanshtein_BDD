@@ -2,11 +2,11 @@
 
 This repository contains a maven framework that has:
   
-## Main Package 
-* This is where the actual code for the converter is
+## Main Package - Develope
+* This is where the actual code/build for the temperature converter is.
 
-## Test Package 
-* This is where a BDD framework is setup to test and assert the code found in the Main package.
+## Test Package - Tester
+* This is where a BDD framework is setup to test and assert the code found in the Main package. Main Contents of this package:
 ```
   >Features Package<
   - contains the feature file with a Scenario Outline for this task. Written in Gherkin language.
