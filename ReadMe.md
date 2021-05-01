@@ -49,7 +49,7 @@ This repository contains a maven framework that has:
 
 ## CI/CD Integration
 Amazon EC2:
-* Linux AMI with Docker and Jenkins.yml loaded onto it using a pre-made bash script.
-  *  We install the Jenkins.yml onto our instance and then configure our instance throug out IP address and specific port: [Link to Jenkins](http://100.26.236.242:8080/)
-    * Username: admin
-    * Password: admin   
+* Linux AMI with Docker and Jenkins installed on it.
+  *  Access to Jenkins: [Link to Jenkins](http://100.26.236.242:8080/)
+      * Username: admin
+      * Password: admin   
