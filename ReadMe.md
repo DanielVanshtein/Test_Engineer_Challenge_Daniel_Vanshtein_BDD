@@ -21,8 +21,9 @@ This repository contains a maven framework that has:
      -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file
 ```
 ## Reports
+* Using maven-sure-plugin we can get html reports generated from a 'cucumber.json' file that we add in our @CucumberOptions in our CukesRunner
 ```xml
-<plugin>
+          <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
