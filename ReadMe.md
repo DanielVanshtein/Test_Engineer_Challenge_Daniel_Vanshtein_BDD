@@ -3,10 +3,10 @@
 This repository contains a maven framework that has:
   
 ## Main Package 
-\* This is where the actual code for the converter is
+* This is where the actual code for the converter is
 
 ## Test Package 
-\* This is where a BDD framework is setup to test and assert the code found in the Main package.
+* This is where a BDD framework is setup to test and assert the code found in the Main package.
 ```
   >Features Package 
   - contains my feature file with my Scenario Outline.
@@ -21,3 +21,6 @@ This repository contains a maven framework that has:
      -> FailedRunner - runs only the failed tests that it finds in the rerun.txt file
 ```      
 ## CI/CD Integration
+Amazon EC2:
+* Linux AMI with Docker and Jenkins
+  *    
