@@ -1,6 +1,6 @@
 Feature: Test inputs for Temperature Converter
 
-  @wip
+  @regression @UI
   Scenario Outline: Verify temperature conversion output is correct
     Given Student is provided with a <input numerical value>
     And Student is provided with a "<input unit of measurement>" as initial unit
@@ -16,4 +16,4 @@ Feature: Test inputs for Temperature Converter
       | 6.5                   | Fahrenheit                | Rankine                    | dog      | incorrect |
       | 136.1                 | dogcow                    | Celsius                    | 45.32    | invalid   |
       | 200.65                | Kelvin                    | catdog                     | 34.67    | invalid   |
-      | 200.65                | Kelvin                    | Celsius                    |          | incorrect |
+      | 150.89                | Kelvin                    | Celsius                    |          | incorrect |
