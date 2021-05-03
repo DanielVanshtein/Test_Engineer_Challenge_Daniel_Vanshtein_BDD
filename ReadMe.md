@@ -1,6 +1,8 @@
 # Test Engineer Challenge - Temperature Converter
 
-This repository contains a maven framework that has:
+**About:** 
+* A temperature converter functionality that works through a browser is being tested in this repository. 
+* This repository contains a maven framework that has [Main Package](#main-package---developer), [Test Package](#test-package---tester), [Reports](#reports) and [CI/CD Integration](#ci--/cd-integration) :
   
 ## Main Package - Developer
 * This is where the actual code/build for the temperature converter is.
@@ -57,4 +59,4 @@ Amazon EC2:
       * Username: admin
       * Password: admin
 
-* WebHooks is setup on Github and Jenkins to do CI everytime we commit any changed to our repository.  
+* WebHooks is setup on Github to trigger Jenkins API endpoint about a commit event. Jenkins then performs the test and if all passes it will merge our commits into the Master branch as CI.
