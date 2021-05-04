@@ -2,7 +2,9 @@
 
 **About:** 
 * A temperature converter functionality that works through a browser is being tested in this repository. 
-* This repository contains a maven framework that has [Main Package](#main-package---developer), [Test Package](#test-package---tester), [Reports](#reports) and [CI/CD Integration](#ci--/cd-integration) :
+* This repository contains a maven framework that has [Main Package](#main-package---developer) and [Test Package](#test-package---tester)
+* I use Maven-Cucumber-Reports for reporting: [Reports](#reports) 
+* To run this repository in jenkins, push a commmit and a job will run in [Jenkins](http://100.26.236.242:8080/)  [CI/CD Integration](#ci--/cd-integration)
   
 ## Main Package - Developer
 * This is where the actual code/build for the temperature converter is.
