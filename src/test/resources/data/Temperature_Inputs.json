@@ -1,28 +1,24 @@
 {
   "testcases": [
     {
-      "test case": 1,
       "input numerical value": 84.2,
       "input unit of measurement": "Fahrenheit",
       "target unit of measurement": "Rankine",
       "response": "543.94"
     },
     {
-      "test case": 2,
       "input numerical value": 317.33,
       "input unit of measurement": "Kelvin",
       "target unit of measurement": "Fahrenheit",
       "response": "111.554"
     },
     {
-      "test case": 3,
       "input numerical value": 6.5,
       "input unit of measurement": "Fahrenheit",
       "target unit of measurement": "Rankine",
       "response": "dog"
     },
     {
-      "test case": 4,
       "input numerical value": 136.1,
       "input unit of measurement": "dogcow",
       "target unit of measurement": "Celsius",

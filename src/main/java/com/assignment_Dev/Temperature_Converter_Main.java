@@ -27,7 +27,7 @@ public class Temperature_Converter_Main {
     //parameterization
     //step_definitions
     public static String convert_Temperature(double initialTemp, String inputUnitOfMeasure, String outputUnitOfMeasure, String studentResponse) {
-        final DecimalFormat df1 = new DecimalFormat("0.0");
+
 
 
 
@@ -47,9 +47,9 @@ public class Temperature_Converter_Main {
             }
 
             ArrayList<String> responseString_BrokenUp_List = new ArrayList<>(Arrays.asList(studentResponse.split("")));
+            responseString_BrokenUp_List.remove(".");
 
             for (int i = 0; i < responseString_BrokenUp_List.size(); i++) {
-                responseString_BrokenUp_List.remove(".");
 
                 Character eachCharacter = responseString_BrokenUp_List.get(i).charAt(0);
                 //check for letters and special characters
@@ -61,10 +61,13 @@ public class Temperature_Converter_Main {
             }
         }
 
+
+        final DecimalFormat df1 = new DecimalFormat("0.0");
+
         //authoritative_answer
         double authoritative_Answer = 0;
 
-        //format and round the student response
+        //format and round the student response //Math.round possible fix
         double studentResponse_Double = Double.parseDouble(df1.format(Double.parseDouble((studentResponse))));
 
         /**

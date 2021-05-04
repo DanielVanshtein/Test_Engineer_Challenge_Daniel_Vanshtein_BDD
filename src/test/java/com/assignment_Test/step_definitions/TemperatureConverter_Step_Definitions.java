@@ -9,7 +9,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
-
 import org.junit.Test;
 
 public class TemperatureConverter_Step_Definitions {
