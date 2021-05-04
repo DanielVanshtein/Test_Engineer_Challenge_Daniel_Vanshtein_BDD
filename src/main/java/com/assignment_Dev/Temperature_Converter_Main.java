@@ -6,19 +6,6 @@ import java.util.Arrays;
 
 public class Temperature_Converter_Main {
 
-    public static void main(String[] args) {
-
-        System.out.println("convert_Temperature(84.2, \"Fahrenheit\", \"Rankine\", \"543.94\") = " + convert_Temperature(84.2, "Fahrenheit", "Rankine", "543.87"));
-        System.out.println("convert_Temperature(317.33, \"Kelvin\", \"Fahrenheit\", \"111.554\") = " + convert_Temperature(317.33, "Kelvin", "Fahrenheit", "111.554"));
-        System.out.println("convert_Temperature(6.5, \"Fahrenheit\", \"Rankine\", \"dog\") = " + convert_Temperature(6.5, "Fahrenheit", "Rankine", "dog"));
-        System.out.println("convert_Temperature(317.33, \"dogcow\", \"Celsius\", \"45.32\") = " + convert_Temperature(317.33, "dogcow", "Celsius", "45.32"));
-
-
-        final DecimalFormat df1 = new DecimalFormat("0.0");
-        System.out.println("df1.format(543.87) = " + df1.format(543.87));
-        System.out.println(Double.parseDouble(df1.format(84.2 + 459.67)));
-
-    }
 
     //if(!response.matches("^\\d+\\.\\d?\\d?$")) return "incorrect";
 
@@ -27,15 +14,6 @@ public class Temperature_Converter_Main {
     //parameterization
     //step_definitions
     public static String convert_Temperature(double initialTemp, String inputUnitOfMeasure, String outputUnitOfMeasure, String studentResponse) {
-
-
-
-
-        // C -> F = (C * 1.8) + 32
-
-        // C -> R = C(1.8) + 491.67
-        //Math.round
-
 
         ArrayList<String> unitOfMeasurementsList = new ArrayList<>(Arrays.asList("Fahrenheit", "Kelvin", "Celsius", "Rankine"));
         if (!unitOfMeasurementsList.contains(inputUnitOfMeasure) || !unitOfMeasurementsList.contains(outputUnitOfMeasure)) {

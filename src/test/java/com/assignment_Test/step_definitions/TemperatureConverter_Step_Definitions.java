@@ -7,9 +7,9 @@ import static com.assignment_Test.pojo.Temperature_Inputs.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.SoftAssertions;
+import io.cucumber.messages.internal.com.google.common.base.Verify;
 import org.junit.Assert;
-import org.junit.Test;
+
 
 public class TemperatureConverter_Step_Definitions {
 
@@ -48,12 +48,7 @@ public class TemperatureConverter_Step_Definitions {
         );
 
         Assert.assertEquals(actualResult, expectedResult);
-
-// We can use assertJ dependency to get SoftAsserts which will continue the code even if an assertion fails.
-//        SoftAssertions sa = new SoftAssertions();
-//        sa.assertThat(actualResult).isEqualTo(expectedResult);
-
-
+        Verify.verify(actualResult.equals(expectedResult));
     }
 
 
