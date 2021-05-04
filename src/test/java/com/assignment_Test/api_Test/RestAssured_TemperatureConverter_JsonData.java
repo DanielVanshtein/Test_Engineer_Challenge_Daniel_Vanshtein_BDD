@@ -8,17 +8,17 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import static org.hamcrest.Matchers.*;
 
-import org.junit.jupiter.api.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+
 public class RestAssured_TemperatureConverter_JsonData {
 
-    @BeforeAll
+    @Before
     public static void init(){
        baseURI = "https://9616a323-0d5b-4fd7-8448-7f761b9c6ddb.mock.pstmn.io";
        basePath = "/temperature" ;
@@ -28,8 +28,7 @@ public class RestAssured_TemperatureConverter_JsonData {
     RequestSpecification rs = given().log().uri().contentType(ContentType.JSON);
     static List<String> allResponse = new LinkedList<>();
 
-    @DisplayName("Post a request to /correct and assert the response is 'correct' ")
-    @Order(1)
+//    ("Post a request to /correct and assert the response is 'correct' ")
     @Test
     public void check_ResponsePayload_For_Correct_Response(){
         allResponse.add(
@@ -48,8 +47,7 @@ public class RestAssured_TemperatureConverter_JsonData {
     }
 
 
-    @DisplayName("Post a request to /incorrect and assert the response is 'incorrect' ")
-    @Order(2)
+//    ("Post a request to /incorrect and assert the response is 'incorrect' ")
     @Test
     public void check_ResponsePayload_For_Incorrect_Response(){
         allResponse.add(
@@ -66,8 +64,8 @@ public class RestAssured_TemperatureConverter_JsonData {
                 .extract().jsonPath().getString("response"));
     }
 
-    @DisplayName("Post a request to /incorrect2 and assert the response is 'incorrect' ")
-    @Order(3)
+//    @DisplayName("Post a request to /incorrect2 and assert the response is 'incorrect' ")
+
     @Test
     public void check_ResponsePayload_For_Incorrect_Response2(){
         allResponse.add(
@@ -84,8 +82,7 @@ public class RestAssured_TemperatureConverter_JsonData {
                 .extract().jsonPath().getString("response"));
     }
 
-    @DisplayName("Post a request to /invalid and assert the response is 'invalid' ")
-    @Order(4)
+//    @DisplayName("Post a request to /invalid and assert the response is 'invalid' ")
     @Test
     public void check_ResponsePayload_For_Invalid_Response(){
         allResponse.add(
@@ -108,7 +105,7 @@ public class RestAssured_TemperatureConverter_JsonData {
 
     }
 
-    @AfterAll
+ @After
     public static void tearDown(){
         reset();
     }
