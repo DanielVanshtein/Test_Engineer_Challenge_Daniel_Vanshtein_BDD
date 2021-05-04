@@ -17,7 +17,6 @@ public class TemperatureConverter_Step_Definitions {
     public void student_is_provided_with_a(Double double1) {
         testCase = new Temperature_Inputs();
         testCase.setInput_Numerical_Value(double1);
-
     }
 
     @Given("Student is provided with a {string} as initial unit")
